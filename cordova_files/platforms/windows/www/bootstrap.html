@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Text to ASCII</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+.modal-dialog {
+    position: absolute;
+    margin-top: 15%;
+    margin-left: 20%;
+}
+.container {
+    margin-top:5%;
+}
+body{
+  background:orange;
+}
+</style>
+<body>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Hey. It's Vinayak, Vinayak Sinha.<br>
+          This page can convert text into ascii and vice-versa. It is made with html,css,bootstrap,javascript and jQuery. </p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+<br><br>
+<div class="container">
+<div class="row">
+<div class="col-md-5"> 
+  <form>
+    <div class="form-group">
+      <label for="text">Text:</label>
+      <textarea style=" border: 3px dotted #6D8499;" class="form-control" rows="5" id="text"></textarea>
+    </div>
+  </form>
+  </div>
+  <div align="center" style="margin-top: 2%;margin-bottom: 2%;" class="col-md-2">
+   <button type="button" class="btn btn-primary" id="t">Text to ASCII</button><br><br>
+   <button type="button" class="btn btn-primary" id="a">ASCII to Text</button>
+   </div>
+  <div class="col-md-5">
+  <form>
+  <div class="form-group">
+  <label for="ascii">ASCII:</label>
+  <textarea style=" border: 3px dotted #6D8499;" class="form-control" rows="5" id="ascii"></textarea>
+  </div>
+  </form>
+  </div>
+</div>
+<script>
+$('document').ready(function(){
+ $('#myModal').modal('show');
+});
+$('#myModal').on('show.bs.modal', function () {
+$('.modal-content').css('height',$( window ).height()*0.4);
+$('.modal-content').css('width',$( window ).width()*0.6);
+});
+
+
+$('#t').click(function(){
+var x= $('#text').val();
+var a="";
+for(i=0;i<x.length;i++){
+a += x.charCodeAt(i);
+if(i!=(x.length - 1))
+a +=" ";
+}
+$('#ascii').val(a);
+})
+$('#a').click(function(){
+var x = $('#ascii').val();
+var arr = x.split(" ");
+var a = "";
+for(i=0;i<arr.length;i++){
+    a += String.fromCharCode(arr[i]);
+  }
+  $('#text').val(a); 
+})
+</script>
+</body>
+</html>

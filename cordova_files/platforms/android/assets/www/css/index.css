@@ -1,0 +1,22 @@
+textarea{
+    border: 3px dotted #6D8499;
+    border-radius: 25px;
+    outline: none;
+}
+input{
+    border: 3px dotted #6D8499;
+    border-radius: 25px;
+    outline: none;
+}
+body{
+    background-color: orange;
+}
+div{
+    margin:auto;
+    text-align: center;
+}
+#b1{
+    border-radius: 25px;
+    font-style: italic;
+    outline: none;
+}

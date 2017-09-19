@@ -1,0 +1,31 @@
+{
+    "name": "com.mb.vinayak",
+    "displayName": "Way2SMS",
+    "version": "1.0.0",
+    "description": "An app to directly send messages via Way2SMS",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Apache Cordova Team",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "cordova-android": "^6.2.3",
+        "cordova-plugin-compat": "^1.0.0",
+        "cordova-plugin-contacts": "^2.3.1",
+        "cordova-plugin-splashscreen": "^4.0.3",
+        "cordova-plugin-whitelist": "^1.3.2",
+        "cordova-windows": "^5.0.0"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-whitelist": {},
+            "cordova-plugin-contacts": {},
+            "cordova-plugin-splashscreen": {}
+        },
+        "platforms": [
+            "android",
+            "windows"
+        ]
+    }
+}
